@@ -1,0 +1,970 @@
+<!doctype html>
+<html>
+<head>
+	<title>Digital Notepad</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="MTOD_Main.css">
+	<link rel="stylesheet" type="text/css" href="MTOD_Exercises.css">
+
+	<script>
+        var baseProdURL = "https://learning.methodic.co.il/EdX/ManhigutTodaatit/";
+		var baseDevpURL = "https://localhost:44398/";
+        var mode = "DEVP";
+		var baseURL = (mode == "DEVP") ? baseDevpURL : baseProdURL;
+
+		window.onload = function () {
+			var iframes = document.getElementsByTagName('iframe');
+            var EdxID = findGetParameter("EdxID")
+
+			for (var i = 0; i < iframes.length; i++) {
+                var url = new URL(iframes[i].src);
+                url.searchParams.set("EdxID", EdxID); // setting your param
+				iframes[i].src = url.href;
+			}
+
+			var dlink = document.getElementById("download")
+            var url = new URL(dlink.href);
+            url.searchParams.set("EdxID", EdxID); // setting your param
+            dlink.href = url.href;
+
+		};
+
+        function findGetParameter(parameterName) {
+            var result = "222222222", tmp = [];
+            location.search
+                .substr(1)
+                .split("&")
+                .forEach(function (item) {
+                    tmp = item.split("=");
+                    if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+                });
+            return result;
+        }
+
+		function scrollToEx(num) {
+			var elmnt = document.getElementById("ex_" + num);
+			elmnt.scrollIntoView();
+		}
+	</script>
+</head>
+<body>
+	<div class="mtod-ex-list">
+
+		<div class="mtod-gen-text" style="border-top: none;">
+			<span class="mtod-unit-title">ברוכים הבאים למחברת הדיגיטלית!</span><br><br>
+
+			כאן תוכלו למצוא את התרגילים ואת התשובות שמלאתם, כל עוד לחצתם "שמור".<br>
+			השתמשו בתוכן העניינים כדי לדלג לתרגיל הרצוי.<br><br>
+		</div>
+
+		<div id="ex_0" class="ex-links">
+			<a href="javascript: scrollToEx(31)">תחילתו של מסע תודעה | הגדרת מטרות אישיות | מה תרצו ללמוד?</a><br />
+			<a href="javascript: scrollToEx(1)">למה אנחנו בלופ? | חופש מוחלט (Total Freedom) | תורכם לתרגל!</a><br />
+			<a href="javascript: scrollToEx(2)">למה אנחנו בלופ? | אירוע מכונן | התנסות ותרגול </a><br />
+			<a href="javascript: scrollToEx(3)">למה אנחנו בלופ? | מיקוד שליטה | התנסות ותרגול </a><br />
+			<a href="javascript: scrollToEx(4)">למה אנחנו בלופ? | מודל Be-Do-Have | תורכם לתרגל</a><br />
+			<a href="javascript: scrollToEx(5)">סיפורה של תודעה | משבצות | תורכם לתרגל</a><br />
+			<a href="javascript: scrollToEx(6)">סיפורה של תודעה | רואים בי טועים בי | תורכם לתרגל</a><br />
+			<a href="javascript: scrollToEx(7)">סיפורה של תודעה | מסכות | תורכם לתרגל</a><br />
+			<a href="javascript: scrollToEx(8)">סיפורה של תודעה | שיעור/התפתחות אישית | תורכם לתרגל</a><br />
+			<a href="javascript: scrollToEx(9)">סיפורה של תודעה | חותם/השפעה | תורכם לתרגל </a><br />
+			<a href="javascript: scrollToEx(10)">סיפורה של תודעה | חוט מקשר בין הנקודות | תורכם לתרגל</a><br />
+			<a href="javascript: scrollToEx(11)">אני במראה | מודל אפר"ת | תורכם לתרגל</a><br />
+			<a href="javascript: scrollToEx(12)">אני במראה | הסרגלים | ממשיכים לעבוד עם הסרגלים</a><br />
+			<a href="javascript: scrollToEx(13)">אני במראה | הסרגלים | איך בונים את הסרגלים</a><br />
+			<a href="javascript: scrollToEx(14)">אני במראה | חוק המראות | תורכם לתרגל</a><br />
+			<a href="javascript: scrollToEx(15)">מה שמואר - צומח | סיבה ותוצאה | תורכם לתרגל</a><br />
+			<a href="javascript: scrollToEx(16)">מה שמואר - צומח | בירור רצון | בירור רצון - אז מה אתם רוצים?</a><br />
+			<a href="javascript: scrollToEx(17)">מה שמואר - צומח | תודעה מכוונת | תורכם לתרגל</a><br />
+			<a href="javascript: scrollToEx(18)">מה שמואר - צומח | שימור תודעה | תורכם לתרגל</a><br />
+			<a href="javascript: scrollToEx(19)">מה שמואר - צומח | פעולה נובעת | תורכם לתרגל (2)</a><br />
+			<a href="javascript: scrollToEx(20)">מפת ה - Being  | מעגל החוזקות | סיפור ההצלחה שלי</a><br />
+			<a href="javascript: scrollToEx(21)">מפת ה - Being  | מעגל החוזקות | הרחבת מעגל החוזקות?</a><br />
+			<a href="javascript: scrollToEx(22)">מפת ה - Being  | מעגל החוזקות | הרחבת מעגל החוזקות - מגוון החוזקות</a><br />
+			<a href="javascript: scrollToEx(32)">מפת ה - Being  | מעגל החוזקות | מעגל החוזקות – אפיון החוזקות?</a><br />
+			<a href="javascript: scrollToEx(23)">מפת ה - Being  | מעגל התשוקות | מערכת ההפעלה של התכונה / יכולת</a><br />
+			<a href="javascript: scrollToEx(24)">מפת ה - Being  | מעגל התשוקות | תרגלו את "מעגל התשוקות" - מדד המימוש</a><br />
+			<a href="javascript: scrollToEx(25)">מפת ה - Being  | מעגל התשוקות | תרגלו את "מעגל התשוקות" - עוברים לשליטה ישירה</a><br />
+			<a href="javascript: scrollToEx(27)">מפת ה - Being  | מעגל התשוקות | מדד ההתלהבות</a><br />
+			<a href="javascript: scrollToEx(26)">מפת ה - Being  | מעגל התשוקות | גילוי התשוקה הגנרית</a><br />
+			<a href="javascript: scrollToEx(29)">מפת ה - Being  | מעגל התשוקות | מימוש התשוקה הגנרית</a><br />
+			<a href="javascript: scrollToEx(30)">מפת ה-Being שלי  | Connecting the dots | ערך לחברה</a><br />
+			<a href="javascript: scrollToEx(28)">מפת ה-Being שלי  | Connecting the dots | תורכם לתרגל</a><br /><br />
+			<a id="download" href="https://learning.methodic.co.il/EdX/ManhigutTodaatit/SummaryExport.aspx?EdxID=%%USER_ID%%">הורדה</a><br />
+		</div>
+
+		<!-- תחילתו של מסע תודעה הגדרת מטרות אישיות | מה תרצו ללמוד? -->
+		<div id="ex_31" class="mtod-gen-text">
+			<span class="mtod-unit-title">הגדרת מטרות אישיות</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				אנחנו מתחילים מסע משותף ,מאתגר ומעניין.<br>
+				אבל לפני שנתחיל, כדי מאוד שנדע לאן אנחנו רוצים להגיע.
+				<br />
+				מה המטרות שלכם? מה תרצו להשיג בסיום הקורס?
+				<br />
+				רשמו עד חמש מטרות אנונימיות וראו אילו מטרות נוספות מנסים הלומדים הנוספים להשיג.
+				<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeTextShort.aspx?EdxID=%%USER_ID%%&placeID=101" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/09168c76fba1438db93c620c7afa8c75" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- למה אנחנו בלופ? חופש מוחלט (Total Freedom) | תורכם לתרגל! -->
+		<div id="ex_1" class="mtod-gen-text">
+			<span class="mtod-unit-title">פנטזיות - Total Freedom</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				בעולם מושלם, של חיים נטולי דאגות ואילוצים, שיש בהם שקט כלכלי תמידי ומתמשך, שיש לך חופש מוחלט לבחור כל ורק מה שעושה לך טוב, וכל בחירה תזכה לתמיכה חברתית מלאה:<br><br>
+				<b>איך היו נראים חייך? מי היית רוצה להיות ומה היית רוצה לעשות?</b><br><br>
+
+				זכרו ללחוץ על "שמור" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=1" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/8a3c1ab94cdd4856a0efe9650bcfd270" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br>
+		</div>
+
+		<!--  התנסות ותרגול | למה אנחנו בלופ? אירוע מכונן -->
+		<div id="ex_2" class="mtod-gen-text">
+			<span class="mtod-unit-title"></span>
+			<span class="mtod-unit-text">
+				<br><br>
+				כולנו חווינו בחיים אירועים, תקופות, סביבות ודמויות שהשפיעו עלינו, עיצבו אותנו והפכו אותנו להיות מי שאנחנו.<br>
+				זה הזמן להתבונן בסיפור חייך ולכתוב מהם אותם דברים שבנו ועיצבו אותך בחיים. <br>
+				<strong>כיצד הם השפיעו על אישיותך ועל חייך?</strong><br><br>
+
+				זכרו ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=2" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/6bbfbc53181b42a0976063d158afc3ee" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- התנסות ותרגול | למה אנחנו בלופ? מיקוד שליטה -->
+		<div id="ex_3" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "מיקוד שליטה"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+				החיים מורכבים ממצבים שונים. בחנו את המצבים האלה.<br>
+				איך הם גורמים לכם להרגיש?<br>
+				מתי אתם במיקוד שליטה פנימי? מתי בחיצוני?<br>
+				תוכלו להוסיף עוד מצבים משלכם.<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.
+				<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableEight.aspx?EdxID=%%USER_ID%%" class="jobskills-container" style="height: 430px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/a302fe3fe39a478785fc2fcdf1f1f7ed" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- למה אנחנו בלופ? מודל Be-Do-Have | תורכם לתרגל -->
+		<div id="ex_4" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "מודל Be-Do-Have"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				חשבו על החלטות ובחירות שקיבלתם בעבר, או החלטות שאתם שוקלים לבקופה זו ממש.<br><br>
+
+				בדקו את עצמכם מול מודל  Be-Do-Have:<br>
+				אם אף אחד לא היה רואה, עדיין הייתם פעולים כך?<br>
+				האם ההחלטה נשתה מבבפנים החוצה (Be)?<br>
+				האם היא הושפעה ממקור חיצוני ונועדה להשיג תחושה של ערך עצמי (Have)?<br><br>
+
+				זכרו ללחוץ על "שמור" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableSeven.aspx?EdxID=%%USER_ID%%" class="jobskills-container" style="height: 460px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/704ec02181ee4dbd895139d6d49f25d4" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- סיפורה של תודעה משבצות | תורכם לתרגל -->
+		<div id="ex_5" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "משבצות"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				כל אחד מאתנו נכנס בילדותו ל'משבצת' שמאופיינת בתכונה או בתפקיד מסוים. בשל החשיבה הקונקרטית המאפיינת אותנו בילדותנו, אם משבצת כלשהי כבר הייתה תפוסה, חיפשנו משבצת אחרת. למשל, אם אחד האחים במשפחתי היה "היצירתי", המשבצת הזו כבר תפוסה. זה אומר שאני לא אוכל להיות יצירתי, ואני מחפש משבצת אחרת להשתייך אליה. ברוב המקרים  אנחנו נוטים להישאר במשבצת שלנו גם בבגרותנו. אמנם, החשיבה שלנו מתפתחת, אבל השייכות למשבצת הספציפית לא משתנה.<br><br>
+
+				<b>מהי המשבצת ש"בחרת" כילד? על איזו משבצת ויתרת כי הייתה תפוסה? האם אהבת את המשבצת שלך? איך זה משפיע עליך כיום בחיים הבוגרים?</b><br><br>
+
+				זכרו ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=3" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/5e0efafd831045f3955bb9939e052ebf" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- סיפורה של תודעה רואים בי טועים בי |  -->
+		<div id="ex_6" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "רואים בי טועים בי"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+				לכל אחד מאתנו יש לעתים תחושה שהעולם טועה באופן שבו הוא תופש אותו.<br><br>
+
+				איפה זה תופס אותך, או יותר נכון טועה בך? באיזה אופן העולם מפספס, מפרש או שופט אותך לא נכון?<br>
+				אם זה דברים שקיימים בך והעולם לא מזהה, ואם זה דברים שהעולם טוען לגביך שלא בצדק.<br><br>
+
+				<b>
+					איפה נחווה אצלך הפער בין האני האמיתי שלך לבין איך שהוא נתפש בעיני אחרים?<br>
+					האם זה כך בכל מעגלי החיים? למה לדעתך זה קורה? איך זה גורם לך להרגיש, להגיב ולהתמודד?
+				</b>
+				<br><br>
+
+				זכרו ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=4" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/f49067ce68664aba865a4414404de7c8" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- סיפורה של תודעה מסכות | תורכם לתרגל -->
+		<div id="ex_7" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "מסכות"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				<b>
+					כולנו נוהגים לעתים בחוסר אותנטיות ועוטים על עצמנו, שלא במודע, מסכות. מהן המסכות שלך?
+					מתי הן נכנסות לשימוש ואיך הן משרתות אותך?
+					על איזה פחד הן מכסות? מה דרוש לך כדי להסיר אותן?
+				</b><br><br>
+
+				כוחה של השאלה הזו הוא בעצם האפשרות להרהר בה, גם אם התשובה לא ברורה לנו. הנה כמה הארות שיעזרו לארגן את המחשבות:
+
+				<ul>
+					<li>
+						<b>המסכה שלנו, ברוב המקרים, כלל אינה מודעת</b> (רוב האנשים לא יודעים איזו מסכה הם עוטים).
+					</li>
+					<li>
+						<b>המסכה  מאפשרת לנו להציג בפני הסביבה את הדמות שבחרנו להיות</b> (אי שם בילדותנו, באופן לא מודע). תפקידה אחד:  להגן עלינו. להסוות את מה שנתפש בעינינו כחולשה ופגיעות. למה? כי הנחת המוצא (הלא מודעת) שלנו היא שהעולם לא יאהב או יקבל אותנו כמו שאנחנו "באמת". שהאני הטבעי והאותנטי שלנו לא מספיק טוב. אז אנחנו בונים לעצמנו דמות חליפית משופרת, מין אווטאר שנראה לנו שהעולם יעדיף, יקבל ויאהב.
+
+					</li>
+					<li>
+						<b>ההבדל בין תפקיד למסכה</b>: זו הבחנה חשובה שכדאי לעשות. ההבדל העיקרי בין השניים הוא יכולת הבחירה שלנו. כשאנחנו ממלאים תפקיד כלשהו (הורה, מנהל, חבר וכו') אנחנו בוחרים לעתים להתנהג באופן מסוים, שאולי אינו אותנטי, אבל נמצא בהלימה לתפישת התפקיד שלנו. למשל, בתפקיד ניהולי. אם המצב כרגע מעורפל ומבלבל, אבל בחרתי לשדר בטחון ויציבות, התנהגתי אמנם באופן לא אותנטי אבל עשיתי זאת מתוך אמונה שזה הדבר הנכון כרגע עבור הכפיפים שלי. חופש בחירה פירושו שאם בהמשך קריאת המפה תשתנה, אוכל לשתף אותם בחוסר הוודאות ובקושי שבו נמצא הארגון. לעומת זאת, כשמדובר במסכה, אין חופש בחירה. בשום מצב לא ארשה לעצמי לחשוף בפניי עובדיי חוסר בטחון או בלבול.
+
+					</li>
+					<li>
+						<b>שורש המסכה הוא פחד</b>. ולכן אנו חוששים להסירה. חשוב להבין: מסכה היא לא התנהגות שבחרנו במודע, על מנת להשיג תוצאות מסוימות. היא סוג של טייס אוטומטי שמחזיר אותנו שוב ושוב לאותה התנהגות, גם כשהיא כבר לא משרתת אותנו בחיינו. בפשטות, המסכות  גורמות לכך שהפעולה תבחר אותנו במקום שאנחנו נבחר את הפעולה שנכונה לנו.
+
+					</li>
+					<li>
+						<div>הוויתור על אותנטיות גובה מאיתנו מחיר כבד.</div> אנחנו משקיעים כמות עצומה של אנרגיה בתחזוקת המסכה. זה מתיש, זה מחליש. ולא רק זה: יש מחיר אדיר לריחוק ממהותנו המקורית והטבעית. הריחוק הזה גורם לחוסר זרימה, לתקיעות ולאיזו תחושה "תת קרקעית" של כאב שמרחפת מעלינו ובתוכנו כעננה קבועה.
+
+					</li>
+					<li>
+						<b>איך מזהים מסכה?</b> בעזרת השאלות הבאות:<br><br>
+
+						- אילו מצבים תמיד גורמים לי לאבד אנרגיה?<br>
+						- מה אני לא מרשה לעצמי להיות או להתנהג?<br>
+						- אם העולם היה מקבל אותי ללא תנאי, מה היה משתנה בחיי? בבחירות שלי? בפעולות שלי?<br>
+						- איזו אמת פנימית הכי מפחיד אותי לחשוף?
+					</li>
+				</ul>
+
+				זכרו ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=5" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/deedb5153ce245dab62770d14f0cc97b" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- סיפורה של תודעה שיעור/התפתחות אישית | תורכם לתרגל -->
+		<div id="ex_8" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "שיעור/התפתחות אישית"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				כל אחד מאיתנו אומר לעצמו לפעמים: "הגיע הזמן שאלמד ל...".<br>
+				לדוגמה: "הגיע הזמן שאלמד לשים גבולות". "הגיע הזמן שאלמד להביע רגשות". "הגיע הזמן שאלמד לשחרר שליטה" וכו'. מהו אותו "שיעור" שהיית רוצה ללמוד? שיעור שיאפשר לך להתפתח ולחיות את החיים באופן אותנטי ובהלימה לרצונותיך. <br>
+				<b>מה יעזור לך ללמוד אותו?</b>
+
+				<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=6" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/3f37ce84f30a4054bfa739f8e71d84bd" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- תורכם לתרגל | סיפורה של תודעה חותם/השפעה -->
+		<div id="ex_9" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "חותם/השפעה"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+
+				הנוכחות שלנו בעולם מותירה חותם. בין שאנחנו מודעים לכך ובין שלא, בין שאנחנו מתכוונים לכך ובין שלא.<br>
+				עצם הנוכחות שלנו משפיע על סביבתנו.<br>
+
+				<strong>לו יכולת לבחור באופן מודע ומכוון, מהו החותם או ההשפעה שהיית רוצה להשפיע על העולם (קרוביך, ילדיך או כל ממשק פיזי או רגשי אחר)?</strong><br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=7" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/b54e91ecae16454cb0cdbdd2694430b2" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- תורכם לתרגל | סיפורה של תודעה חוט מקשר בין הנקודות -->
+		<div id="ex_10" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "חוט מקשר בין הנקודות"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				מאחורי רצף השאלות (בסדר הזה) מתחבא סיפורה של התודעה שלך. מסקרן? <br>
+				<strong>נסו לחשוב, מהו החוט המקשר בין כל השאלות? מהו הנרטיב שחוזר ושוזר בין כל התשובות שלי?</strong><br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=8" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/d5e07e1b6d4143188d6e9af12f644098" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- תורכם לתרגל | אני במראה מודל אפר"ת -->
+		<div id="ex_11" class="mtod-gen-text">
+			<span class="mtod-unit-title">מודל אפר"ת:</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				היזכרו באירוע בו מיקוד השליטה היה חיצוני? מתי התגובה הייתה ראקטיבית?<br />
+				היעזרו במודל אפר"ת לנתח את האירוע.<br /><br />
+
+				<img src="/static/MTOD_ModelEfrat.png" alt="" width="30%" style="margin-right: 35%;" /><br /><br />
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeTextShort2.aspx?EdxID=%%USER_ID%%&placeID=9" class="jobskills-container" style="height: 380px;"></iframe>
+
+			<div class="notepad-inv">
+				<div class="title">רוצים לתרגל על אירוע נוסף?</div>
+				היעזרו במודל אפר"ת ונתחו אותו <br />
+				במחברת הקורס.
+			</div>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/d5dd7ac1f3354c7c8dd35591c66bd7aa" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- ממשיכים לעבוד עם הסרגלים | אני במראה הסרגלים -->
+		<div id="ex_12" class="mtod-gen-text">
+			<span class="mtod-unit-title">מודל אפר"ת:</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				האופן שבו אנחנו תופסים את העולם, מעיד פחות על העולם, ויותר על האופן בו אנו תופסים את העולם.<br>
+				לנוכח כל מציאות שנקלטת בתודעתנו, אנחנו תמיד שולפים באופן אוטומטי סט קבוע של סרגלים, שבעזרתם אנחנו שופטים את העולם.<br>
+				<b>הסרגלים שבהם אנו שופטים את העולם, משקפים את האופן שבו אנחנו שופטים את עצמנו.</b><br>
+				מתוך הפוטנציאל האין סופי שיש בעולם, אנחנו מותנים לראות ולחוות רק את מה שנמצא בסרגלים שלנו. סקרנים לגלות את תפיסת המציאות והסרגלים שלכם? השלימו את הטבלה.<br><br>
+
+				<span class="mtod-unit-title"></span><br><br>
+
+				<b>התרגיל:</b> להשלים את הטבלה.<br><br>
+				<b>מה עושים:</b> משלימים את הטבלה <br>
+				מי הן חמשת הדמויות שנוספות לטבלה: ליד עמודת המנחה, עמודה 2 מימין נוסיף את השם: מדונה. אחריה, בארבעת העמודות הנותרות - נוסיף 4 דמויות - 4 אנשים אמיתיים ומשמעותיים מהחיים שלנו. לגבי כל אחת מהדמויות כותבים את 5 התכונות הבולטות ביותר שמאפיינות כל הדמות.
+				<br>
+				אנו ממליצים לכם לצפות בסרטון ההדרכה בהמשך העמוד, בו תוכלו לראות כיצד מילאו הגיבורים את טבלת הסרגלים.
+				<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="קבלת החלטות מבוססות נתונים" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableOne.aspx?EdxID=%%USER_ID%%&step=2" class="jobskills-container" style="height: 430px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/f99cadb15c1d4b179a69660232cc0b6d" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- איך בונים את הסרגלים | אני במראה הסרגלים -->
+		<div id="ex_13" class="mtod-gen-text">
+			<span class="mtod-unit-title">זיכוך הטבלה לסרגלים</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				<b>מה עושים: </b><br>
+				א. מזככים את הטבלה בהתאם לסרטון הסמן שראינו. את הסרגלים שגילינו נציג בגרף הבא<br><br>
+
+				ב.  בקצוות הסרגל כותבים את שם הסרגל והיפוכו.<br>
+				יש להקפיד שהיפוך הסרגל מוגדר באופן חיובי ללא מילות שלילה.<br>
+				לדוגמה:<br>
+				סרגל של ביטחון, במקום להגדיר את ההיפוך כ"חוסר ביטחון" - אשאל את עצמי: מי שאין לו ביטחון, מה כן אפשר לאמר עליו?<br>
+				נשיב לעצמנו בכנות המרבית - מהי התפיסה שלי לגבי אדם שאין לו ביטחון?<br>
+				להמחשה: יש משתתפים שהגדירו את ההיפוך של ביטחון כך: אפס, מיותר, ביטול עצמי.<br><br>
+
+				ג. משקל: משקל הסרגל נקבע על פי כמות הפעמים שכל סרגל הופיע בטבלה שלנו ומיוצג בקוביה הימנית של הגרף. כותבים את הסרגלים בסדר יורד, מן הסרגל בעל המשקל הגבוה ביותר ועד לסרגל בעל המשקל הנמוך ביותר.<br><br>
+
+				ד. ממקמים את עצמנו על כל סרגל. אם גרף הסרגל נמדד בין 1 ל 10, היכן המיקום שלך?<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="קבלת החלטות מבוססות נתונים" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/Tabletwo.aspx?EdxID=%%USER_ID%%&step=2" class="jobskills-container" style="height: 500px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/f80653566c1445f39edbcf9cd23c937a" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- תורכם לתרגל | אני במראה חוק המראות -->
+		<div id="ex_14" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "חוק המראות"</span>
+			<span class="mtod-unit-text">
+				<br />
+
+				אחרי התיאוריה הגיע הזמן לתרגל!<br />
+				כעת תתבקשו לאתר את הסרגל הפעיל ולפצח את מערכת ההפעלה שלכם.<br />
+				איך עושים את זה?<br /><br />
+
+				בחירת מראה:<br />
+				בחרו מראה ממנה תרצו להתחיל את הפיצוח.<br />
+				זכרו: מראה היא כל תכונה, סיטואציה, התנהגות או אדם שמוציאים אותנו מאיזון.<br /><br />
+
+				איתור הסרגל הפעיל:<br />
+				למה אנחנו יוצאים מאיזון?<br />
+				בכל תשובה, שאלו את עצמכם שוב "למה?"<br />
+				לדוגמה:<br />
+				"הוא מעצבן אותי"<br />
+				<strong>למה?</strong><br />
+				"כי הוא תוקפני"<br />
+				<strong>למה?</strong><br />
+				"כי הוא מדבר בקול רם ממש"<br />
+				<strong>למה?</strong><br />
+				"כי הוא מנסה שישמעו אותו"<br /><br />
+
+				הפרשנות שלנו היא שאותו אדם תוקפני, ואילו כשנצלול פנימה, נבין שהוא פשוט רוצה להישמע.<br /><br />
+
+				נשאל "למה?" עד שנגיע לשורש הפנימי (בהכרח במיקוד שליטה פנימי) ונגלה מהי הפרשנות הסובייקטיבית האוטומטית שלנו את אותה סיטואציה / התנהגות / תכונה.<br /><br />
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeTextDbl.aspx?EdxID=%%USER_ID%%&placeID=102" class="jobskills-container" style="height: 650px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/851759f343684e75af907e46e662e6fc" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- תורכם לתרגל | מה שמואר - צומח סיבה ותוצאה -->
+		<div id="ex_15" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "סיבה ותוצאה"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				<b>מה הפחד שבבסיס ההתניה שלי?</b>
+				<br><br>
+				זכרו ללחוץ על "שמור" לפני המעבר לשלב הבא.
+				<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=10" class="jobskills-container" style="height: 350px;"></iframe>
+
+				<b>היכן אני מזהה שאני פועל מתוך צורך ופחד (ולא רצון/ אהבה)?</b>
+				<br><br>
+				זכרו ללחוץ על "שמור" לפני המעבר לשלב הבא.
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=11" class="jobskills-container" style="height: 350px;"></iframe>
+
+			<span class="mtod-unit-text">
+				<b>מאיזו חוויה רגשית אני בורח?</b>
+				<br><br>
+				זכרו ללחוץ על "שמור" לפני המעבר לשלב הבא.
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=12" class="jobskills-container" style="height: 350px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/9a2d1f4951134e08a6e8449d4644c20b" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- בירור רצון - אז מה אתם רוצים? | מה שמואר - צומח בירור רצון -->
+		<div id="ex_16" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "בירור רצון"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				זוכרים את השאלה הראשונה בסיפורה של תודעה? שאלת ה-Total freedom:<br>
+				אילו היית חי חיים המאפשרים לך חופש מוחלט לבחור בכל אשר חפצה נפשך, חיים נטולי דאגות ואילוצים, חיים בהם אתה ומשפחתך "מסודרים" מבחינה כלכלית. חיים בהם כל החלטה שלך היתה מקבלת תמיכה וגיבוי משפחתי וחברתי, כיצד היו נראים חייך? מי היית רוצה להיות? מה היית רוצה לעשות?<br><br>
+				<strong>
+					דמיינו שהכל אפשרי, אפילו חוקי הפיזיקה לא מגבילים אתכם. מותר לכם לרצות הכל!<br>
+					כיתבו רשימה של לפחות עשרה רצונות, קטנים או גדולים, חומריים או רוחניים, חשובים או שוליים, העיקר – שזה מה שאנחנו רוצים!
+				</strong><br><br>
+
+				טבלה זו תלווה אותנו בהמשך.<br>
+				בינתיים תוכלו למלא רק את עמודת "הרצון".<br>
+				לא תוכלו למלא את עמודות "מד ההתלהבות" ו"מד המימוש".<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br><br>
+			</span>
+			<iframe title="קבלת החלטות מבוססות נתונים" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableFour.aspx?EdxID=%%USER_ID%%&step=1" class="jobskills-container" style="height: 580px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/46c0e313986f4cc89145bf11f59b9c72" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- תורכם לתרגל | מה שמואר - צומח תודעה מכוונת -->
+		<div id="ex_17" class="mtod-gen-text">
+			<span class="mtod-unit-title"></span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				<strong>
+					זה הזמן לכוונן את התודעה שלנו בעזרת מ.ר.א.ה . חיובית.
+					בוחרים לפחות רצון אחד מתוך רשימת הרצונות שלנו וכותבים עבורו את המראה החיובית (מוחשית, רגשית, אישית, זמן הווה, חיובית).
+				</strong><br><br>
+
+				ההמלצה היא לכתוב מראה חיובית לכל הרצונות משתי סיבות:<br>
+				1. ככל שאנו מתרגלים את כוונון התודעה, כך היכולת להחזיק תודעה של מראה חיובית מתעצמת ומשתפרת.<br>
+				2. מראה חיובית מקדמת את הסיכוי שהפוטנציאל יהפוך למציאות.<br><br>
+				<strong>חשוב לזכור: המראה החיובית מציגה תמונת מציאות אופטימלית, גם אם כרגע התודעה שלנו אינה מסוגלת להאמין שזה אפשרי.</strong><br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=15" class="jobskills-container" style="height: 350px;"></iframe>
+			<span class="mtod-unit-text">
+				<b>
+					קוראים שוב את המראה החיובית שכתבנו ובודקים:<br>
+					האם השתמשת במילות שלילה? <br>
+					האם כתבת בזמן עתיד? <br>
+					האם כתבת על אחרים (גוף שלישי)? <br>
+					האם ישנם משפטים שמבטאים את הפחד שלך במקום את המציאות האופטימלית? אם כן – זה הזמן לתקן.
+				</b>
+				<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=16" class="jobskills-container" style="height: 350px;"></iframe>
+			<b>את המראה החיובית מומלץ לקרוא כל יום על מנת לאמן את התודעה שלנו להישאר מכווננת.</b>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/b0b3088b2eb44ad98464f493201648e9" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- תורכם לתרגל | מה שמואר - צומח שימור תודעה -->
+		<div id="ex_18" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "שימור תודעה"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				רישמו לפחות 3 פעולות שאתם יכולים לבצע לשימור תודעה.<br /><br />
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeTextShort.aspx?EdxID=%%USER_ID%%&placeID=17" class="jobskills-container" style="height: 310px;"></iframe>
+
+			<div class="notepad-inv">
+				<div class="title">תרצו להמשיך בתרגול?</div>
+				רשמו נקודות נוספות לשימור <br />
+				במחברת הקורס.
+			</div>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/93372d45b0ac4a03b9ddbd2bd784e3b4" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- תורכם לתרגל | מה שמואר - צומח פעולה נובעת -->
+		<div id="ex_19" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "פעולה נובעת"</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				<strong>
+					פעולה נובעת היא פעולה שעונה על השאלה הבאה:<br>
+					מהי הפעולה (Doing) שמבטאת באופן המדויק ביותר את הרצון שלך (Being)?<br><br>
+				</strong>
+				מומלץ לבחור רצון ספציפי ולענות לגביו, מהי לדעתך הפעולה הנובעת עבורו. (בהחלט יתכן כי ישנן מספר פעולות שעונות על שאלה זו).
+				<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=18" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/5f47053f83d34d7f86c9296fbe5f8369" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- סיפור ההצלחה שלי | מפת ה - Being מעגל החוזקות -->
+		<div id="ex_20" class="mtod-gen-text">
+			<span class="mtod-unit-title">גילוי החוזקות שלך בעזרת חקר סיפורי הצלחה</span>
+			<span class="mtod-unit-text">
+				<br><br>
+				<strong>תיאור סיפור ההצלחה:</strong><br>
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br><br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=103&rowCnt=12" class="jobskills-container" style="height: 450px;"></iframe><br><br>
+
+			<span class="mtod-unit-text">
+				<strong>מה הייתה ההצלחה בסיפור:</strong><br>
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br><br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=104&rowCnt=6" class="jobskills-container" style="height: 280px;"></iframe><br><br>
+
+			<span class="mtod-unit-text">
+				<strong>מה אפשר להצלחה לקרות: (היעזרו במחסן החוזקות שבהמשך העמוד)</strong><br>
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br><br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=105&rowCnt=6" class="jobskills-container" style="height: 280px;"></iframe><br><br>
+
+			<div class="notepad-inv">
+				<div class="title">
+					אני בטוחה שיש לכם <br />
+					יותר מסיפור הצלחה אחד!
+				</div>
+				חישבו על סיפור הצלחה נוסף, <br />
+				ונתחו אותו באותו אופן במחברת הקורס.
+			</div>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/f8e711b3cc9e43b09e1bb99e1eca5c8e" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!--  מפת ה - Being  | מעגל החוזקות | מה תרם להצלחה?  -->
+		<div id="ex_21" class="mtod-gen-text">
+			<span class="mtod-unit-title">גילוי החוזקות שלך בעזרת חקר סיפורי הצלחה - ממשיכים!</span>
+			<span class="mtod-unit-text">
+				<br><br>
+				לפניך 3 טבלאות ריקות.<br>
+				בכל טבלה יש לבחור תכונה אחת שזיהית בטבלה של סיפור ההצלחה, כגורם להצלחתך. <br>
+				לגבי כל תכונה יש לפרט, מהן התכונות שעומדות בבסיסה.<br><br>
+
+				<strong>דוגמה:</strong><br>
+				נניח שזיהיתי בניתוח הראשוני תכונה של <strong>נחישות</strong>.<br />
+				בתרגיל הנוכחי נשאל את עצמנו: <br />
+				מה איפשר לי להפגין נחישות? <br />
+				אילו תכונות נוספות יש בי שתורמות לנחישות שלי?<br /><br />
+
+				<strong>למשל:</strong> אומץ, אמונה בדרך, יכולת לדמיין את המטרה הסופית, כוח רצון וכו.	<br /><br />
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br />
+			</span>
+			<iframe title="" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableFive.aspx?EdxID=%%USER_ID%%&subtbl=1" class="jobskills-container" style="height:450px;"></iframe>
+			<iframe title="" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableFive.aspx?EdxID=%%USER_ID%%&subtbl=2" class="jobskills-container" style="height:450px;"></iframe>
+			<iframe title="" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableFive.aspx?EdxID=%%USER_ID%%&subtbl=3" class="jobskills-container" style="height:450px;"></iframe>
+
+			<div class="notepad-inv">
+				<div class="title">תרצו להמשיך בתרגול?</div>
+				רשמו על תכונות נוספות לשימור <br />
+				במחברת הקורס.
+			</div>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/acc5c36a5b6e4696a63a37e626a64ecd" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- נתון או חוזקה?  | מפת ה - Being מעגל החוזקות -->
+		<div id="ex_22" class="mtod-gen-text">
+			<span class="mtod-unit-title">הרחבת מעגל החוזקות - מגוון החוזקות</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				מסתכלים על כל התכונות שתרמו לסיפור ההצלחהחקר סיפורי ההצלחה עזר לנו לגלות שיש לנו כמות עצומה של חוזקות. תובנה חשובה נוספת היא תובנת <b>מגוון החוזקות:</b> לא רק שיש לנו הרבה יותר חוזקות ממה שידענו אלא שהן מגוונות ושונות באיכותן.
+				<br /><br />
+				בכדי לגלות את איכותן המגוונת של החוזקות הסתכלו על כל החוזקות שגיליתם.<br />
+				לגבי כל תכונה – נסו להגדיר לאיזו קטגוריה היא שייכת.<br />
+				כך למשל יכול להיות שגיליתם שיש לכם יכולת הקשבה, אמפתיה ורגישות גבוהה לסביבה. תוכלו לשייך תכונות אלה ודומות להן לקטגוריה של "יחסי אנוש" או "אינטליגנציה רגשית".<br />
+				או למשל אם גיליתם שיש לכם יכולת לשמור על פוקוס ומיקוד, יסודיות ויכולת גבוהה של סדר וארגון – תוכלו לשייך תכונות אלה לקטגוריה של "משימתיות" או של "מקצועיות".
+				<br /><br />
+				<strong>אז מה עושים?</strong><br />
+				לגבי כל אחת מן התכונות/היכולות - משייכים אותה לקטגוריה רחבה יותר כמו למשל: יחסי אנוש, אהבה, מנהיגות, יכולת חשיבה וכדומה.<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="קבלת החלטות מבוססות נתונים" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableSix.aspx?EdxID=%%USER_ID%%&step=3" class="jobskills-container" style="height:600px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/af5982f8660a4e7fa7edfa5ccc0cf062" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- הרחבת מעגל החוזקות - מגוון החוזקות  | מפת ה - Being מעגל החוזקות -->
+		<div id="ex_32" class="mtod-gen-text">
+			<span class="mtod-unit-title">מעגל החוזקות – אפיון החוזקות</span>
+			<span class="mtod-unit-text">
+				<br><br>
+				<strong>נתון או חוזקה?</strong><br />
+				בטבלה שלפניכם לגבי כל אחת מן היכולות שזיהינו - מסווגים האם היכולת קיימת אצלי כנתון (מופעלת באופן ר-אקטיבי), או כחוזקה (מופעלת באופן אקטיבי)?<br />
+				כאשר יכולת שלנו היא נתון זה אומר שלפעמים היא פועלת ובאה לידי ביטוי ולפעמים לא.<br />
+				למשל: נניח שיש לנו יכולת הקשבה מפותחת. אבל לפעמים היא באה לידי ביטוי (נניח עם החברים קל לנו להקשיב) ולפעמים לא (בבית אנחנו לא מצליחים להקשיב).<br />
+				כאשר יכולת שיש לנו היא חוזקה - משמעות הדבר שאנחנו יכולים להשתמש בה מתי שאנחנו רוצים, על פי בחירתנו – קל לנו להיכנס למצב הקשבה מתי שאנחנו רוצים.<br />
+				השאיפה שלנו היא להפוך את כל המשאבים הטבעיים שנתונים בנו לחוזקות כך שנוכל לבחור להפעילם מתי שנרצה.<br /><br />
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.
+				<br>
+			</span>
+			<iframe title="קבלת החלטות מבוססות נתונים" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableSix.aspx?EdxID=%%USER_ID%%" class="jobskills-container" style="height:600px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/48cea55e6fea4b01bdc85a9df5afbf05" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+		</div>
+
+		<!-- נתון או חוזקה?  | מפת ה - Being מעגל החוזקות -->
+		<div id="ex_23" class="mtod-gen-text">
+			<span class="mtod-unit-title"></span>
+			<span class="mtod-unit-text">
+
+				כדי להפוך <span style="color:#253892;font-weight: bold;" title="חוזקה במצב הפעלה ר-אקטיבי">נתון</span> <span style="color:#253892;font-weight: bold;" title="חוזקה במצב הפעלה פרואקטיבי">לחוזקה</span>, כך שנוכל להפעילו באופן יזום עלינו להבין את מערכת ההפעלה של התכונה.<br>
+				כדי להבין את מערכת ההפעלה של נתון נשאל את עצמנו: מה אנחנו עושים כאשר אנחנו מפגינים את התכונה שהיא נתון?<br><br>
+
+				דוגמה:  הנתון שזיהית הוא: הקשבה.<br><br>
+
+				מה אני עושה כאשר אני בהקשבה?
+				<ul>
+					<li>נטרול הסחות דעת</li>
+					<li>רכינה קדימה כלפי הדובר</li>
+					<li>הקפדה לא להתפרץ לדברי האחר</li>
+					<li>וכו</li>
+				</ul>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=19" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<div class="notepad-inv">
+				<div class="title">תרצו להמשיך בתרגול?</div>
+				רשמו נקודות נוספות לשימור <br />
+				במחברת הקורס.
+			</div>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/a36e65ffbd63462596f61ce918c08bef" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+
+		</div>
+
+		<!-- מדד ההתלהבות | מפת ה - Being מעגל התשוקות -->
+		<div id="ex_24" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "מעגל התשוקות" - מדד המימוש</span>
+			<span class="mtod-unit-text">
+				<br><br>
+				חזרו לרשימת הרצונות שכתבנו בשלב בירור הרצון (בפרק "מה שמואר צומח").<br />
+				לגבי כל אחד מהרצונות שכתבנו נשאל: עד כמה מימוש הרצון שלי בשליטתי?<br />
+				ונסווג בהתאם: שליטה ישירה, שליטה עקיפה או חוסר שליטה.<br />
+				שליטה ישירה - לגמרי בידיים שלי.<br />
+				שליטה עקיפה - יש לי השפעה אך זה לא רק בשליטתי.<br />
+				חוסר שליטה - אין לי שום השפעה.<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="קבלת החלטות מבוססות נתונים" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableFour.aspx?EdxID=%%USER_ID%%&step=3" class="jobskills-container" style="height: 580px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/e39efe4a6c0846bc8dda722afdd8f030" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+
+		</div>
+
+		<!-- מפת ה - Being מעגל התשוקות | מעגל התשוקות -->
+		<div id="ex_25" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "מעגל התשוקות" - עוברים לשליטה ישירה</span>
+			<span class="mtod-unit-text">
+				<br><br>
+				הסתכלו על הרצונות שהגדרתם בטבלה כבעלי שליטה עקיפה או חוסר שליטה.<br />
+				האם ניתן לשנות את הסיווג שלהם לרמת שליטה גבוהה יותר?<br /><br />
+
+				<strong>טיפ לבדיקה:</strong><br />
+				אם אתם מתלהבים ומאמינים ברצון, אם אתם יכולים לפעול לטובתו, זוהי שליטה ישירה.<br />
+				זכרו: מידת השליטה אינה מוגדרת על-פי התוצאה הסופית (האם הצלחנו לממש את הרצון) אלא ממידת היכולת שלנו <b>לפעול</b> למימוש הרצון.<br /><br />
+				<strong>כעת סווגו מחדש את מידת השליטה בהתאם לבדיקה שערכתם.</strong><br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="קבלת החלטות מבוססות נתונים" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableFour.aspx?EdxID=%%USER_ID%%&step=2" class="jobskills-container" style="height: 580px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/3f26424314b74a0688603a8a8e1256b8" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+
+		</div>
+
+		<!-- מפת ה - Being מעגל התשוקות | מעגל התשוקות -->
+		<div id="ex_27" class="mtod-gen-text">
+			<span class="mtod-unit-title">תרגלו את "מעגל התשוקות" - מדד ההתלהבות</span>
+			<div class="mtod-unit-text">
+				<br><br>
+				לגבי כל אחד מהרצונות שכתבתי: עד כמה מרגש אותי לדמיין את המימוש של הרצון הזה?<br />
+				<b><u>מדרגים:</u></b>
+				<ol id="txt">
+					<li>לא מרגש</li>
+					<li>קצת מרגש</li>
+					<li>מרגש</li>
+					<li>מאוד מרגש</li>
+					<li>מעיף אותי מאושר</li>
+				</ol>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</div>
+			<iframe title="קבלת החלטות מבוססות נתונים" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/TableFour.aspx?EdxID=%%USER_ID%%&step=2" class="jobskills-container" style="height: 580px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/a28eba279b1e42618859ebb8eda19b05" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+
+		</div>
+
+		<!-- תורכם לתרגל | מפת ה - Being מעגל התשוקות -->
+		<div id="ex_26" class="mtod-gen-text">
+			<span class="mtod-unit-title">גילוי התשוקה הגנרית</span>
+			<span class="mtod-unit-text">
+				<br><br>
+
+				<strong>
+					מה עושים?
+					<ol>
+						<li>נזכרים ברשימת הרצונות שכתבנו בשלב בירור הרצון.</li>
+						<li>גילוי התשוקה הגנרית:</li>
+					</ol>
+				</strong>
+
+				לגבי כל רצון נשאל את עצמנו: "<strong>למה</strong>?"<br>
+				<strong>למה</strong> אנחנו רוצים את זה? <strong>למה</strong> זה כיף? <strong>למה</strong> זה מלהיב? <strong>למה</strong> זה מרגש?<br><br>
+
+				הנחיות :
+				<ul>
+					<li>נמשיך לשאול "למה?" שוב ושוב. כל תשובה שניתן, נשאל גם לגביה "למה?"</li>
+					<li>עד מתי נמשיך לשאול למה? עד שנרגיש שאין לנו עוד תשובה חוץ מ: כי זה כיף, כי אנחנו אוהבים את זה או כי זה פשוט מגניב . זה הסימן שהגענו לתשוקה הגנרית</li>
+					<li>
+						על פי רוב התשוקה הגנרית היא פעולה. מאפייניה העיקריים:
+						<ol>
+							<li><strong>עיוות בתחושת הזמן</strong>: כשאנחנו בתשוקה שלנו יש תחושה שהזמן עוצר מלכת או טס בטירוף.</li>
+							<li><strong>רמת אנרגיה</strong>: כשאנחנו בתשוקה שלנו אנחנו מתמלאים באנרגיה. זה מרגיש שיכולנו לעשות את זה לנצח ולא ימאס לנו לעולם</li>
+						</ol>
+					</li>
+				</ul>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=20" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<div class="notepad-inv">
+				<div class="title">
+					יש לכם הרבה תשוקות <br />
+					שכדאי לגלות!
+				</div>
+				אתם מוזמנים לשוב ולתרגל<br />
+				במחברת הקורס.
+			</div>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/5b2f6818f7944100bc093ee47818f25b" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+
+		</div>
+
+		<!-- תורכם לתרגל | מפת ה - Being מעגל התשוקות -->
+		<div id="ex_29" class="mtod-gen-text">
+			<span class="mtod-unit-title">מימוש התשוקה הגנרית</span>
+			<span class="mtod-unit-text">
+				<br><br>
+				תשוקה גנרית ניתנת למימוש באופנים רבים.<br>
+				לדוגמה: אדם שתשוקתו הגנרית היא "לטפל" יכול לממשה אם יהיה רופא, פסיכולוג, וטרינר, גנן (מטפל בצמחים).<br>
+				ישנם עוד מימושים אפשריים רבים לטיפול. כדי לדייק מהו המימוש הנכון עבורנו נשתמש בשאלת ה"איך" של המודל המ.ל.א : איך אני רוצה לממש תשוקה זו? תכליתה של שאלת ה"איך" היא לאפיין בצורה המדויקת ביותר את המימוש הנכון עבורנו.<br><br>
+
+				<b>אז מה עושים?</b>
+
+				<ol>
+					<li>בוחרים תשוקה גנרית</li>
+					<li>שואלים לגביה שאלות של "איך" שהן שאלות אפיון: במי? עם מי? באיזו סביבה? איך? איזה סוג?</li>
+					<li>
+						דוגמה: תשוקה גנרית: לטפל<br>
+						נשאל את עצמנו: במי אנחנו רוצים לטפל? באיזו סביבה אנחנו רוצה לטפל? באיזו שיטה / כלים אנחנו רוצים לטפל? כמו איזה מטפל/ת אנחנו רוצים להיות? וכד'
+					</li>
+				</ol>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=21" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/16b47e4642454f0ead696037da738cd6" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+
+		</div>
+
+		<!-- תורכם לתרגל | מפת ה - Being Connecting the dots -->
+		<div id="ex_30" class="mtod-gen-text">
+			<span class="mtod-unit-title">מפת ה-Being שלי – ערך לחברה (Service)</span>
+			<span class="mtod-unit-text">
+				<br><br>
+				מעגל הערך לחברה מתייחס לכל מה שאנחנו עושים (Doing) שנותן ערך לחברה (בכל מעגלי החיים: עבודה, זוגיות, הורות, מערכות יחסים וכו').<br /><br />
+
+				אם תבחנו את כל הפעולות בעלות הערך לחברה שאתם עושים תגלו שלא כולן מחוברות לתשוקה ומבטאות את הכישרונות שלכם. חלק (לפעמים ניכר) מהפעולות שאנו עושים מחוברות לשורש של פחד וצורך (תודעה ר-אקטיבית). הן נעשות מתוך תחושת 'לא נעים', 'אין ברירה' או חובה ולא מתוך בחירה (תודעה פרואקטיבית) או יצירה (תודעה קריאטיבית).<br /><br />
+
+				מיפוי ה-GPS של ה-Being שלנו נועד לגלות מהם אותם דברים שלעשות אותם גם מבטא את הכישרונות שלנו (G), גם מבטא את התשוקות שלנו (P), וגם נותן ערך לחברה (S). ככל שאנחנו חיים בהלימה לרצונות שלנו ומממשים את הכישרונות שלנו באופן שנותן ערך לחברה כך אנחנו מאושרים יותר ומנהיגים את חיינו.<br /><br />
+
+				<b>רשמו לעצמכם פעולות בעלות ערך שאתם עושים,</b> כתבו לעצמכם האם לדעתכם הן חלק מ ה -GPS שלכם (תודעה קריאיטיבית) או פעולות שנעשות מתוך פחד או צורך (תודעה ר-אקטיבית).<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</span>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=22" class="jobskills-container" style="height: 330px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/b1df6f4f58924460a934229512f59510" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+
+		</div>
+
+		<!-- תורכם לתרגל | מפת ה - Being Connecting the dots -->
+		<div id="ex_28" class="mtod-gen-text">
+			<span class="mtod-unit-title">תורכם לתרגל - מפת ה- being שלי</span>
+			<div class="mtod-unit-text">
+				<br><br>
+				<strong>מה עושים?</strong>
+				<ol id="txt">
+					<li><b>רשמו את כל החוזקות והתשוקות</b> (הגנריות) שאיתרתם ברשימה אחת (מומלץ ליצור ייצוג ויזואלי למעגלי התשוקות והחוזקות).</li>
+					<li><b>חברו באופן רנדומלי משפטים</b> המורכבים מהמילים המופיעות ברשימה (גם תשוקות וגם חוזקות).</li>
+					<li><b>קראו את כל הפסקאות שחיברתם למפת ה- Being שלכם.</b> איזו מהן גורמת לכם להתרגש ולהתלהב במיוחד? איזו מהן מרגישה לכם הכי מדויקת? חפשו את הפסקה המרגשת והמדויקת ביותר עבור ה- Being שאתם.</li>
+					<li>יתכן שעצם ניסוח מודעת הדרושים סיפקה לכם רעיון למימוש שנותן ערך לחברה.  דמיינו את עצמכם חיים בהתאם למודעת הדרושים – <b>איך נראים החיים האלה בפועל?</b></li>
+				</ol>
+
+				כתבו מ.ר.א.ה. חיובית למודעת הדרושים שכתבתם.<br />
+				אם עדיין אין לכם רעיון למימוש אתם מוזמנים לחשוב על מימושים ובנוסף לתת לאנשים בסביבתכם לקרוא את המודעה ולהעלות רעיונות למימושים.<br /><br />
+
+				מודעת הדרושים תשרת אתכם כמצפן פנימי לקבלת החלטות שמדויקות ומתאימות לBeing-  שלכם.<br><br>
+
+				להקפיד ללחוץ על "שמירה" לפני המעבר לשלב הבא.<br>
+			</div>
+			<iframe title="שאלה פתוחה" src="https://learning.methodic.co.il/EdX/ManhigutTodaatit/FreeText.aspx?EdxID=%%USER_ID%%&placeID=23&rowCnt=16" class="jobskills-container" style="height: 630px;"></iframe>
+
+			<br><br>
+			<a href="javascript: scrollToEx(0)"><strong>&#9651;</strong> לחזור לרשימה</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://courses.campus.gov.il/courses/course-v1:campus+GOV_manhigut_todaa+2022_2/jump_to_id/efb221565b8244f89ccd3273fd40d18f" target="_top"><strong>&#9665;</strong> לראות בקורס</a><br />
+
+		</div>
+
+	</div>
+</body>
+</html>
